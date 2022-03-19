@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: #EEEEEE;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 30px;
+            border-radius: 65px;
+            border: 3px solid black;
+            box-shadow: 
+            -9px -9px 2px 0px #E91E63,
+            9px 9px 2px 0px #2196F3;
+            counter-increment: myIndex;
+            ;
+
+
+        }
+        div::before{
+            content:counter(myIndex);
+            position:relative;
+            background-color: black;
+            color:white;
+            font-size:20px;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -20px;
+            left: 30px;
+            
+        }
+        div::after{
+            content: "Element";
+            position: relative;
+            top: -1px;
+            left:23px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
